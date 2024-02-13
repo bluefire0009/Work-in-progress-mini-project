@@ -1,6 +1,6 @@
 ﻿public static class Healing
 {
-    public static void heal(int Heal.id)
+    public static int heal(int Heal.id)
     {
         if (heal.id == 1)
             Player.HP += 20
