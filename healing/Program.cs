@@ -18,7 +18,7 @@
             Player.HP += 150
             Console.Write($"Healed 150HP")
 
-        else if (heal.id == 4)
+        else if (heal.id == 5)
             Player.HP += 300
             Console.Write($"Healed 300HP")
 
