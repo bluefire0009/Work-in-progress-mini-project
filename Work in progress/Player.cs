@@ -8,6 +8,7 @@ public class Player
     public int Level { get; set; }
     public Location CurrentLocation { get; set; }
     public Weapon CurrentWeapon { get; set; }
+    public List<Quest> CompletedQuests { get; set; }
 
     // Constructor
     public Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints, int level)
@@ -20,6 +21,7 @@ public class Player
         // speler kan ook in het begin geen wapen hebben, dan is het stadaard op null
         CurrentLocation = null;
         CurrentWeapon = null;
+        CompletedQuests = new List<Quest>();
     }
 
     // Methods
