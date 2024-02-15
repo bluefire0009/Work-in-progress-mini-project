@@ -1,5 +1,6 @@
 class Compass
 {
+    public List<string> locationNames = new();
     List<Location> Locations;
     public string Nname;
     public string Wname;
@@ -10,6 +11,10 @@ class Compass
     public Compass(List<Location> locations)
     {
         Locations = locations;
+        foreach(Location location in locations)
+        {
+            locationNames.Add(location.Name);
+        }
     }
 
     public void makeMap()
@@ -68,6 +73,33 @@ class Compass
                 }
             }
         }
+        // Add allowed directions to the location string
+        for (int i0=0; i0<map.Count; i0++)
+        {
+            List<string> row = map[i0];
+            for(int i1=0; i1<row.Count; i1++)
+            {
+                string column = row[i1];
+                if (locationNames.Contains(column))
+                {
+                    foreach(Location location in Locations)
+                    {
+                        if (location.Name == column) 
+                        {
+                            if (location.LocationToNorth != null)
+                                map[i0][i1] += ",North";
+                            if (location.LocationToWest != null)
+                                map[i0][i1] += ",West";
+                            if (location.LocationToEast != null)
+                                map[i0][i1] += ",East";
+                            if (location.LocationToSouth != null)
+                                map[i0][i1] += ",South";
+                        }
+
+                    }
+                }
+            }
+        }
         foreach (var row in map)
         {
             int i = 0;
@@ -82,6 +114,7 @@ class Compass
             Console.WriteLine();
 
         }
+        Console.WriteLine();
     } 
         
 }
