@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Wszystko HDD\\Szkola\\studia\\miniproject\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj": {}
+    "C:\\Users\\moham\\Desktop\\School\\Miniroject\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj": {}
   },
   "projects": {
-    "D:\\Wszystko HDD\\Szkola\\studia\\miniproject\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj": {
+    "C:\\Users\\moham\\Desktop\\School\\Miniroject\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Wszystko HDD\\Szkola\\studia\\miniproject\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj",
+        "projectUniqueName": "C:\\Users\\moham\\Desktop\\School\\Miniroject\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj",
         "projectName": "Work in progress",
-        "projectPath": "D:\\Wszystko HDD\\Szkola\\studia\\miniproject\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj",
-        "packagesPath": "C:\\Users\\bluefire\\.nuget\\packages\\",
-        "outputPath": "D:\\Wszystko HDD\\Szkola\\studia\\miniproject\\Work-in-progress-mini-project\\Work in progress\\obj\\",
+        "projectPath": "C:\\Users\\moham\\Desktop\\School\\Miniroject\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj",
+        "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\moham\\Desktop\\School\\Miniroject\\Work-in-progress-mini-project\\Work in progress\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bluefire\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,12 +50,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
