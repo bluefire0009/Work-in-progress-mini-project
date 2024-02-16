@@ -13,4 +13,14 @@ public class Quest
         IsCompleted = false;
     }
 
+    public void CompleteQuest()
+    {
+        if (!IsCompleted)
+        {
+            IsCompleted = true;
+            // Additional logic for when the quest is completed
+            // For example, grant experience points to the player
+        }
+    }
+
 }
