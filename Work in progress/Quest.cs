@@ -15,5 +15,4 @@ public class Quest
         GoalAmount = goalAmount;
         CurrentAmount = 0;
     }
-
 }
