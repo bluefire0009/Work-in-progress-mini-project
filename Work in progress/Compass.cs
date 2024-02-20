@@ -6,6 +6,8 @@ class Compass
     public string Wname;
     public string Ename;
     public string Sname;
+    public List<List<string>> Map;
+
 
 
     public Compass(List<Location> locations)
@@ -15,9 +17,11 @@ class Compass
         {
             locationNames.Add(location.Name);
         }
+        Map = makeMap();
+        Console.WriteLine();
     }
 
-    public void makeMap()
+    public List<List<string>> makeMap()
     {
         
         List<List<string>> map = new List<List<string>>();
@@ -100,21 +104,7 @@ class Compass
                 }
             }
         }
-        foreach (var row in map)
-        {
-            int i = 0;
-            foreach(var column in row)
-            {
-                if (column == "")
-                    Console.Write($"|{i}|");
-                else
-                    Console.Write($"|{column}|");
-                i++;
-            }
-            Console.WriteLine();
-
-        }
-        Console.WriteLine();
+        return map;
     } 
         
 }
