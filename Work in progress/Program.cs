@@ -1,2 +1,1 @@
-﻿testing_compass test = new();
-test.test();
+﻿new testing_compass().test();
