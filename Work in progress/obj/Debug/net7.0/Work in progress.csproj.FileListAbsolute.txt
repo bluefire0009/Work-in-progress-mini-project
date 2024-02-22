@@ -1,0 +1,14 @@
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\obj\Debug\net7.0\Work in progress.GeneratedMSBuildEditorConfig.editorconfig
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\obj\Debug\net7.0\Work in progress.AssemblyInfoInputs.cache
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\obj\Debug\net7.0\Work in progress.AssemblyInfo.cs
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\obj\Debug\net7.0\Work in progress.csproj.CoreCompileInputs.cache
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\bin\Debug\net7.0\Work in progress.exe
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\bin\Debug\net7.0\Work in progress.deps.json
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\bin\Debug\net7.0\Work in progress.runtimeconfig.json
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\bin\Debug\net7.0\Work in progress.dll
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\bin\Debug\net7.0\Work in progress.pdb
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\obj\Debug\net7.0\Work in progress.dll
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\obj\Debug\net7.0\refint\Work in progress.dll
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\obj\Debug\net7.0\Work in progress.pdb
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\obj\Debug\net7.0\Work in progress.genruntimeconfig.cache
+D:\Wszystko HDD\Szkola\studia\miniproject\Work-in-progress-mini-project\Work in progress\obj\Debug\net7.0\ref\Work in progress.dll
