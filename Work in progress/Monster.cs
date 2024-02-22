@@ -1,6 +1,6 @@
 public class Monster
 {
-    public int Id { get; private set; }
+    public int ID { get; private set; }
     public string Name { get; private set; }
     public int Health { get; private set; }
     public int XpGiven { get; private set; }
@@ -8,7 +8,7 @@ public class Monster
 
     public Monster(int id, string name, int health, int xpGiven, int dmgGiven)
     {
-        Id = id;
+        ID = id;
         Name = name;
         Health = health;
         XpGiven = xpGiven;

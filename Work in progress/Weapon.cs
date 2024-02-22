@@ -1,12 +1,12 @@
 public class Weapon
 {
-    public int Id { get; private set; }
+    public int ID { get; private set; }
     public string Name { get; private set; }
     public int HitPoints { get; private set; }
 
     public Weapon(int id, string name, int hitPoints)
     {
-        Id = id;
+        ID = id;
         Name = name;
         HitPoints = hitPoints;
     }
