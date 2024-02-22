@@ -12,7 +12,7 @@ public class Location
     public Location LocationToEast { get; set; }
     public Location LocationToWest { get; set; }
 
-    public Location(int id, string name, string description, bool isCompleted, bool isAccessible)
+    public Location(int id, string name, string description, bool isCompleted = false, bool isAccessible = true)
     {
         ID = id;
         Name = name;
