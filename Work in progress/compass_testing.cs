@@ -22,6 +22,7 @@ public class testing_compass {
         Location bridge = new Location(LOCATION_ID_BRIDGE, "Bridge", "A stone bridge crosses a wide river.", null, null);
         Location spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest", "You see spider webs covering covering the trees in this forest.", null, null);
         Location myTest = new Location(999,"TESTEST","ABCDEF",null,null);
+        Location myTest2 = new Location(9999,"TESTEST2","ABCDEF",null,null);
         // Link the locations together
         home.LocationToNorth = townSquare;
 
@@ -34,6 +35,7 @@ public class testing_compass {
         farmhouse.LocationToWest = farmersField;
 
         farmersField.LocationToEast = farmhouse;
+        farmersField.LocationToSouth = myTest2;
 
         alchemistHut.LocationToSouth = townSquare;
         alchemistHut.LocationToNorth = alchemistsGarden;
@@ -51,6 +53,8 @@ public class testing_compass {
 
         myTest.LocationToEast = alchemistsGarden;
 
+        myTest2.LocationToNorth = farmersField;
+
         // Add the locations to the static list
         Locations.Add(home);
         Locations.Add(townSquare);
@@ -62,6 +66,7 @@ public class testing_compass {
         Locations.Add(bridge);
         Locations.Add(spiderField);
         Locations.Add(myTest);
+        Locations.Add(myTest2);
         Compass compass = new(Locations);
         compass.showMap();
     }
