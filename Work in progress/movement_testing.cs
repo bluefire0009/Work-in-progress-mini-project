@@ -1,4 +1,5 @@
-public class testing_compass {
+public class testing_movement
+{
     public void test()
     {
         List<Location> Locations = new List<Location>();
@@ -67,7 +68,10 @@ public class testing_compass {
         Locations.Add(spiderField);
         Locations.Add(myTest);
         Locations.Add(myTest2);
-        Compass compass = new(Locations,home);
-        compass.showMap();
+
+        // Make a player object and set location at home
+        Player PC = new(100,100,0,0,0);
+        PC.CurrentLocation = home;
+        PC.Move();
     }
 }

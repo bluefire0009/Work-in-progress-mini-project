@@ -7,12 +7,14 @@ class Compass
     private string Ename;
     private string Sname;
     public List<List<string>> Map;
+    public Location CurrentLocation;
     
 
 
-    public Compass(List<Location> locations)
+    public Compass(List<Location> locations, Location startingLocation )
     {
         Locations = locations;
+        CurrentLocation = startingLocation;
         foreach(Location location in locations)
         {
             locationNames.Add(location.Name);
@@ -37,8 +39,8 @@ class Compass
             }
             map.Add(emptyList);
         }
-        // Add first location (home) to the map
-        map[10][2] = "Home";
+        // Add the starting location (home) to the map
+        map[10][2] = CurrentLocation.Name;
         // Go through all the locations in the initialized Locations list
         foreach (Location location in Locations)
         {
@@ -137,8 +139,10 @@ class Compass
                 else
                     if (column.Contains('|') | column.Contains("--") | ContainsOnly(column,' '))
                         Console.Write($"{Map[i0][i1]}");
+                    // this condition is only for the locations that are the first in the row.
                     else if (ContainsOnly(Map[i0][i1-1],' '))
                         Console.Write($"{Map[i0][i1].Split(",")[0]}{Map[i0][i1].Split(",")[1]}");
+                    // this is the default condition to print a normal location
                     else
                         Console.Write($"{Map[i0][i1].Split(",")[1]}");
             }
