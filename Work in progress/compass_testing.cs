@@ -67,7 +67,7 @@ public class testing_compass {
         Locations.Add(spiderField);
         Locations.Add(myTest);
         Locations.Add(myTest2);
-        Compass compass = new(Locations);
+        Compass compass = new(Locations,home);
         compass.showMap();
     }
 }
