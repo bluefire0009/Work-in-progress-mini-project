@@ -1,8 +1,8 @@
 using System.Runtime.Intrinsics.X86;
 
-public class testing_movement
+public static class testing_movement
 {
-    public void test()
+    public static void test()
     {
         List<Location> Locations = new List<Location>();
         const int LOCATION_ID_HOME = 1;
