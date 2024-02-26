@@ -32,14 +32,14 @@ public class Player
     {
         var allowed = AllowedLocations(CurrentLocation);
         var allowedNames = new List<string>();
-
+        // print text
         Console.WriteLine("To which of the following locations would you like to go :\n(Case sensitive)");
         foreach (var loc in allowed)
         {
             allowedNames.Add(loc.Name);
             Console.WriteLine($" - {loc.Name}");
         }
-
+        // end print
         string locationInput;
         do
         {
@@ -47,6 +47,7 @@ public class Player
         } while (!allowedNames.Contains(locationInput));
 
         var chosenLocation = allowed.Find(loc => loc.Name == locationInput);
+        // Move the player
         TryMove(chosenLocation);
     }
 
