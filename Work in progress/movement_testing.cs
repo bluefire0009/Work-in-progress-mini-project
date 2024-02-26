@@ -1,3 +1,5 @@
+using System.Runtime.Intrinsics.X86;
+
 public class testing_movement
 {
     public void test()
@@ -71,7 +73,11 @@ public class testing_movement
 
         // Make a player object and set location at home
         Player PC = new(100,100,0,0,0);
+        Compass compass = new(Locations,home);
         PC.CurrentLocation = home;
-        PC.Move();
+        while (true){
+            compass.showMap();
+            PC.Move();
+        }
     }
 }

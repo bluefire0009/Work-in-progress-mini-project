@@ -39,6 +39,7 @@ public class Player
             allowedNames.Add(loc.Name);
         } 
         // print text
+        Console.WriteLine($"You are currently here: {CurrentLocation.Name}");
         Console.WriteLine("To which of the following locations would you like to go :\n(Case sensitive)");
         foreach(Location loc in allowed)
         {
