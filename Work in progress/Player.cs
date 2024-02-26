@@ -1,6 +1,6 @@
 public class Player
 {
-    // eigenschappen
+    // Properties
     public int CurrentHitPoints { get; set; }
     public int MaximumHitPoints { get; set; }
     public int Gold { get; set; }
@@ -10,7 +10,7 @@ public class Player
     public Weapon CurrentWeapon { get; set; }
     public List<Quest> CompletedQuests { get; set; }
     public List<Quest> AcceptedQuests { get; set; }
-    public List<Quest> Inventory { get; set; }
+    public List<Weapon> Inventory { get; set; } // Assuming Item is a class representing inventory items
 
     // Constructor
     public Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints, int level)
@@ -24,77 +24,74 @@ public class Player
         CurrentWeapon = null;
         CompletedQuests = new List<Quest>();
         AcceptedQuests = new List<Quest>();
-        Inventory = new List<Quest>();
-
+        Inventory = new List<Weapon>();
     }
 
     // Methods
-    public void Move ()
+    public void Move()
     {
-        List<string> allowedNames = new();
-        List<Location> allowed = allowedLocations(CurrentLocation);
-        // Add names of allowed locations names to allowedNames list
-        foreach (Location loc in allowed) 
+        var allowed = AllowedLocations(CurrentLocation);
+        var allowedNames = new List<string>();
+
+        Console.WriteLine("To which of the following locations would you like to go :\n(Case sensitive)");
+        foreach (var loc in allowed)
         {
             allowedNames.Add(loc.Name);
-        } 
-        // print text
-        Console.WriteLine("To which of the following locations would you like to go :\n(Case sensitive)");
-        foreach(Location loc in allowed)
-        {
             Console.WriteLine($" - {loc.Name}");
         }
-        // end print
-        
+
         string locationInput;
         do
         {
             locationInput = Console.ReadLine();
-        } 
-        while(!allowedNames.Contains(locationInput));
-        Location chosenLocation = new(0,"","",false,false);
-        
-        // Go through allowed list and assign the input location to a Location which has the same name field
-        foreach(Location loc in allowed)
-        {
-            if (locationInput == loc.Name)
-                chosenLocation = loc;
-        }
-        // Move the player
-        tryMove(chosenLocation);
+        } while (!allowedNames.Contains(locationInput));
+
+        var chosenLocation = allowed.Find(loc => loc.Name == locationInput);
+        TryMove(chosenLocation);
     }
 
     public void EquipWeapon(Weapon weapon)
     {
         CurrentWeapon = weapon;
     }
-    // given a location if the player can move there returns true and changes the field CurrentLocation 
-    // to the location else returns false
-    private bool tryMove(Location newLocation)
+
+    private bool TryMove(Location newLocation)
     {
-        List<Location> allowed = allowedLocations(CurrentLocation);
-        if (allowed.Contains(newLocation)){
+        if (AllowedLocations(CurrentLocation).Contains(newLocation))
+        {
             CurrentLocation = newLocation;
-            return true;}
-        else
-            return false;
+            return true;
+        }
+        return false;
     }
-    // takes a location and returns a list of locations where you can go to from the given location
-    private List<Location> allowedLocations(Location toCheck)
+
+    private List<Location> AllowedLocations(Location toCheck)
     {
-        List<Location> Locations = new();
+        var locations = new List<Location>();
+        if (toCheck.LocationToSouth != null) locations.Add(toCheck.LocationToSouth);
+        if (toCheck.LocationToNorth != null) locations.Add(toCheck.LocationToNorth);
+        if (toCheck.LocationToEast != null) locations.Add(toCheck.LocationToEast);
+        if (toCheck.LocationToWest != null) locations.Add(toCheck.LocationToWest);
 
-        if (toCheck.LocationToSouth != null)
-            Locations.Add(toCheck.LocationToSouth);
-        if (toCheck.LocationToNorth != null)
-            Locations.Add(toCheck.LocationToNorth);
-        if (toCheck.LocationToEast != null)
-            Locations.Add(toCheck.LocationToEast);
-        if (toCheck.LocationToWest != null)
-            Locations.Add(toCheck.LocationToWest);
-        
-        return Locations;
+        return locations;
     }
-    // Hier straks toevogen wat de speler kan doen 
-}
 
+    public void AcceptQuest(Quest quest)
+    {
+        if (!AcceptedQuests.Contains(quest))
+        {
+            AcceptedQuests.Add(quest);
+            Console.WriteLine($"{quest.Description} has been added to your quests.");
+        }
+    }
+
+    public void CompleteQuest(Quest quest)
+    {
+        if (AcceptedQuests.Contains(quest))
+        {
+            AcceptedQuests.Remove(quest);
+            CompletedQuests.Add(quest);
+            Console.WriteLine($"{quest.ID} has been completed.");
+        }
+    }
+}
