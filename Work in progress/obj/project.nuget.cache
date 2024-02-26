@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pdO3krNWzPKzyzo+BYRsLa75/Z4UDNVf1cQ82+jGlIozEAwp00phP1stir4rE1xZRkudrzD4GgOm2SvQjo8Jmg==",
+  "dgSpecHash": "Y4eQdgdvJijW0KVhqXNJYbEt+L5Qs3Ubzo5pn8B8BjkKb3sI8YO1mMMzMfsBXZPiH0dA160RFmdSbt/uIhDuyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\moham\\Desktop\\School\\Miniroject\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\moham\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\moham\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\moham\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\moham\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\borag\\Downloads\\OODP\\mini_project\\Work-in-progress-mini-project\\Work in progress\\Work in progress.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

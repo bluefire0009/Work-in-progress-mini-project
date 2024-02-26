@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Work in progress")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4752e8d9c64535c0de451c79e7b0599469d7fe0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Work in progress")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Work in progress")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
