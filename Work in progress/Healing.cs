@@ -4,7 +4,7 @@ public static class Healing
 {
     public static void heal(Player player, int healId)
     {
-        if (player.CurrentHitPoints >= 0)
+        if (player.CurrentHitPoints <= 0)
         {
             Console.WriteLine("You cant heal when your death");
         }
