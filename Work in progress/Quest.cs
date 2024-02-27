@@ -22,5 +22,4 @@ public class Quest
             // For example, grant experience points to the player
         }
     }
-
 }
