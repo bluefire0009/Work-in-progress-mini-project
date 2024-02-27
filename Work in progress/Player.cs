@@ -34,8 +34,8 @@ public class Player
     {
         var allowed = AllowedLocations(CurrentLocation);
         var allowedNames = new List<string>();
-        // print text
         Map.moveCurrentLocation(CurrentLocation);
+        // print text
         Map.showMap();
         Console.WriteLine($"You are currently at: {CurrentLocation.Name}");
         Console.WriteLine("To which of the following locations would you like to go :\n(Case sensitive)");
