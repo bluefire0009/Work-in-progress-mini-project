@@ -71,6 +71,10 @@ public class PendingQuest
                     player.CurrentHitPoints -= rat.DmgGiven;
                     Console.WriteLine($"\nyou received {rat.DmgGiven} damage from {rat.Name}");
                 }
+                if (rat.Health <= 0)
+                {
+                    Reward.PlayerReward(2, player);
+                }
             }
         }
 
@@ -139,6 +143,10 @@ public class PendingQuest
                     player.CurrentHitPoints -= snake.DmgGiven;
                     Console.WriteLine($"\nyou received {snake.DmgGiven} damage from {snake.Name}");
                 }
+                if (snake.Health <= 0)
+                {
+                    Reward.PlayerReward(2, player);
+                }
             }
         }
 
@@ -206,6 +214,10 @@ public class PendingQuest
                 {
                     player.CurrentHitPoints -= giantSpider.DmgGiven;
                     Console.WriteLine($"\nyou received {giantSpider.DmgGiven} damage from {giantSpider.Name}");
+                }
+                if (giantSpider.Health <= 0)
+                {
+                    Reward.PlayerReward(3, player);
                 }
             }
         }
