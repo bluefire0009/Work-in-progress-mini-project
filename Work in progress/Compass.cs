@@ -1,4 +1,4 @@
-class Compass
+public class Compass
 {
     public List<string> locationNames = new();
     List<Location> Locations;
@@ -134,17 +134,38 @@ class Compass
             for(int i1 = 0; i1<row.Count; i1++)
             {
                 var column = row[i1];
-                if (column=="")
+                if (column == "")
                     Console.Write($" ");
-                else
-                    if (column.Contains('|') | column.Contains("--") | ContainsOnly(column,' '))
-                        Console.Write($"{Map[i0][i1]}");
-                    // this condition is only for the locations that are the first in the row.
-                    else if (ContainsOnly(Map[i0][i1-1],' '))
-                        Console.Write($"{Map[i0][i1].Split(",")[0]}{Map[i0][i1].Split(",")[1]}");
-                    // this is the default condition to print a normal location
+                else if (column.Contains('|') | column.Contains("--") | ContainsOnly(column, ' '))
+                    Console.Write($"{Map[i0][i1]}");
+                // this condition is only for the locations that are the first in the row.
+                else if (ContainsOnly(Map[i0][i1 - 1], ' '))
+                {
+                    var splitColumn = column.Split(",");
+                    // if the location is the current location show "[]" around it
+                    if (splitColumn[1].Contains(CurrentLocation.Name))
+                    {
+                        Console.Write($"{Map[i0][i1].Split(",")[0]}[{Map[i0][i1].Split(",")[1]}]");
+                    }
                     else
+                    {
+                        Console.Write($"{Map[i0][i1].Split(",")[0]}{Map[i0][i1].Split(",")[1]}");
+                    }
+                }
+                // this is the default condition to print a normal location
+                else
+                {
+                    var splitColumn = column.Split(",");
+                    // if the location is the current location show "[]" around it
+                    if (splitColumn[1].Contains(CurrentLocation.Name))
+                    {
+                        Console.Write($"[{Map[i0][i1].Split(",")[1]}]");
+                    }
+                    else
+                    {
                         Console.Write($"{Map[i0][i1].Split(",")[1]}");
+                    }
+                }
             }
             Console.WriteLine();
         }
@@ -179,6 +200,10 @@ class Compass
                 }
             }
         }
+    }
+    public void moveCurrentLocation(Location loc)
+    {
+        CurrentLocation = loc;
     }
     private string stringTimes(int times, string toMultiply)
     {
