@@ -74,7 +74,6 @@ public static class testing_movement
         Compass compass = new(Locations,home);
         PC.CurrentLocation = home;
         while (true){
-            compass.showMap();
             PC.Move();
         }
     }
