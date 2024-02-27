@@ -73,7 +73,7 @@ public class PendingQuest
                 }
                 if (rat.Health <= 0)
                 {
-                    Reward.PlayerReward(2, player);
+                    Reward.PlayerReward(1, player);
                 }
             }
         }
