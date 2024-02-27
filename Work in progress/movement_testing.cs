@@ -1,5 +1,3 @@
-using System.Runtime.Intrinsics.X86;
-
 public static class testing_movement
 {
     public static void test()

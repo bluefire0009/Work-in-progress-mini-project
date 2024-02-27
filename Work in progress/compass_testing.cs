@@ -1,5 +1,5 @@
-public class testing_compass {
-    public void test()
+public static class testing_compass {
+    public static void test()
     {
         List<Location> Locations = new List<Location>();
         const int LOCATION_ID_HOME = 1;
