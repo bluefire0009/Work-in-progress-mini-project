@@ -92,7 +92,7 @@ public class Player
         {
             AcceptedQuests.Remove(quest);
             CompletedQuests.Add(quest);
-            Console.WriteLine($"{quest.ID} has been completed.");
+            Console.WriteLine($"{quest.Description} has been completed.");
         }
     }
 }
