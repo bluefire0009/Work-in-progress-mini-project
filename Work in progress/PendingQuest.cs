@@ -12,7 +12,7 @@ public class PendingQuest
         Weapon rusty_sword = new Weapon(1, "Rusty sword", 5);
         Weapon club = new Weapon(2, "Club", 10);
         // input
-        string choice
+        string choice;
 
         if (Questid == 1)
         {
@@ -149,7 +149,7 @@ public class PendingQuest
             {
                 Console.WriteLine($"\nYour HP: {player.CurrentHitPoints}");
                 Console.WriteLine($"{giantSpider.Name} HP: {giantSpider.Health}");
-                Console.WriteLine(" ")
+                Console.WriteLine(" ");
                 Console.WriteLine("\n1) ATTACK WITH CLUB");
                 Console.WriteLine("2) ATTACK WITH RUSTY SWORD");
                 Console.WriteLine("3) HEAL");
@@ -202,7 +202,7 @@ public class PendingQuest
                     Console.WriteLine($"evantualy the {giantSpider.Name}gave you enough poision to let breath out a foume of purple bubles and fall deffeated on the ground");
                     Console.WriteLine($"you lost to a {giantSpider.Name}");
                 }
-                if (snake.Health > 0)
+                if (giantSpider.Health > 0)
                 {
                     player.CurrentHitPoints -= giantSpider.DmgGiven;
                     Console.WriteLine($"\nyou received {giantSpider.DmgGiven} damage from {giantSpider.Name}");
