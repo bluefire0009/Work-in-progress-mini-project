@@ -16,7 +16,7 @@ public class PendingQuest
 
         if (Questid == 1)
         {
-            while(rat.Health != 0)
+            while(rat.Health >= 0)
             {
                 Console.WriteLine($"Your HP: {player.CurrentHitPoints}");
                 Console.WriteLine($"{rat.Name} HP: {rat.Health}");
@@ -81,7 +81,7 @@ public class PendingQuest
 
         else if (Questid == 2)
         {
-            while(snake.Health != 0)
+            while(snake.Health >= 0)
             {
                 Console.WriteLine($"\nYour HP: {player.CurrentHitPoints}");
                 Console.WriteLine($"{snake.Name} HP: {snake.Health}");
@@ -153,7 +153,7 @@ public class PendingQuest
 
         else if (Questid == 3)
         {
-            while(giantSpider.Health != 0)
+            while(giantSpider.Health >= 0)
             {
                 Console.WriteLine($"\nYour HP: {player.CurrentHitPoints}");
                 Console.WriteLine($"{giantSpider.Name} HP: {giantSpider.Health}");
