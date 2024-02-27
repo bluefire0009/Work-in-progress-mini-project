@@ -3,14 +3,23 @@ public class PendingQuest
     // parameter: Questid 1 = rat, Questid 2 = snake, Questid 3 = giantSpider
     // parameter: Player data for HP calculation
     public void Fight(int Questid, Player player)
-    {   
+    {
         // Monster data
+        /*
         Monster rat = new Monster(1, "rat", 1, 3, 3);
         Monster snake = new Monster(2, "snake", 10, 7, 7);
         Monster giantSpider = new Monster(3, "giant spider", 3, 10, 10);
+        */
+        Monster rat = World.MonsterByID(1);
+        Monster snake = World.MonsterByID(2);
+        Monster giantSpider = World.MonsterByID(3);
         // Weapon data
+        /*
         Weapon rusty_sword = new Weapon(1, "Rusty sword", 5);
         Weapon club = new Weapon(2, "Club", 10);
+        */
+        Weapon rusty_sword = World.WeaponByID(1);
+        Weapon club = World.WeaponByID(2);
         // input
         string choice;
 
