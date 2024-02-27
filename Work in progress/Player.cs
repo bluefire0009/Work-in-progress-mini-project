@@ -6,6 +6,7 @@ public class Player
     public int Gold { get; set; }
     public int ExperiencePoints { get; set; }
     public int Level { get; set; }
+    public Compass Map { get; private set; }
     public Location CurrentLocation { get; set; }
     public Weapon CurrentWeapon { get; set; }
     public List<Quest> CompletedQuests { get; set; }
@@ -20,11 +21,12 @@ public class Player
         Gold = gold;
         ExperiencePoints = experiencePoints;
         Level = level;
-        CurrentLocation = null;
+        CurrentLocation = World.LocationByID(1);
         CurrentWeapon = null;
         CompletedQuests = new List<Quest>();
         AcceptedQuests = new List<Quest>();
         Inventory = new List<Weapon>();
+        Map = new(World.Locations, CurrentLocation);
     }
 
     // Methods
@@ -33,6 +35,9 @@ public class Player
         var allowed = AllowedLocations(CurrentLocation);
         var allowedNames = new List<string>();
         // print text
+        Map.moveCurrentLocation(CurrentLocation);
+        Map.showMap();
+        Console.WriteLine($"You are currently at: {CurrentLocation.Name}");
         Console.WriteLine("To which of the following locations would you like to go :\n(Case sensitive)");
         foreach (var loc in allowed)
         {
